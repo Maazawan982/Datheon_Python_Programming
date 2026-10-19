@@ -1,0 +1,7 @@
+[project]
+name = "hangman-word-guessing-game"
+version = "1.0.0"
+description = "Hangman Word Guessing Game"
+
+[tool.vercel]
+entrypoint = "app.py:app"
