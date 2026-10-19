@@ -1,0 +1,12 @@
+# Hangman Word Guessing Game - Dependencies
+# This project uses Python 3 standard libraries exclusively:
+# - random (word selection)
+# - os, sys (cross-platform path resolution and terminal control)
+# - typing (type hints)
+# - unittest (built-in testing framework)
+
+# Recommended Python Version:
+# Python >= 3.8
+
+# Optional: For older Windows 7/8 Command Prompt color support
+# colorama>=0.4.6
