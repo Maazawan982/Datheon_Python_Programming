@@ -1,0 +1,10 @@
+# Stock Portfolio Performance Tracker - Requirements
+# This project uses Python 3 standard libraries exclusively:
+# - csv (reading constituents.csv and generating portfolio_summary.csv)
+# - sys, os (path resolution and terminal color output)
+# - datetime (transaction timestamps)
+# - typing (strict type annotations)
+# - unittest (built-in testing framework)
+
+# Recommended Python Version:
+# Python >= 3.8

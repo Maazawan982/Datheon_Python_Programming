@@ -1,0 +1,88 @@
+{
+  "greetings": [
+    "hello",
+    "hi",
+    "hey",
+    "good morning",
+    "good afternoon",
+    "good evening",
+    "greetings",
+    "howdy",
+    "what's up",
+    "sup"
+  ],
+  "exit_commands": [
+    "bye",
+    "exit",
+    "quit",
+    "goodbye",
+    "cya",
+    "see you",
+    "leave",
+    "stop",
+    "end"
+  ],
+  "faqs": [
+    {
+      "id": "faq_hours",
+      "intent": "hours_of_operation",
+      "keywords": ["hours", "operation", "opening", "open", "timing", "schedule", "working hours"],
+      "regex_pattern": "\\b(hour|hours|timing|timings|open|opening|schedule|work\\s*hours)\\b",
+      "question": "What are your hours of operation?",
+      "answer": "We operate Monday through Friday from 9:00 AM to 6:00 PM IST."
+    },
+    {
+      "id": "faq_submission",
+      "intent": "project_submission",
+      "keywords": ["submit", "submission", "internship", "project", "assignment", "github", "workspace"],
+      "regex_pattern": "\\b(submit|submission|submitting|project|assignment|github|repository|workspace)\\b",
+      "question": "How do I submit my internship project?",
+      "answer": "You can submit your public GitHub repository link through your Student Workspace."
+    },
+    {
+      "id": "faq_certificate",
+      "intent": "certificate_issuance",
+      "keywords": ["certificate", "receive", "issued", "completion", "code review", "cert"],
+      "regex_pattern": "\\b(cert|certificate|certificates|certified|receive|issued|review)\\b",
+      "question": "When will I receive my certificate?",
+      "answer": "Certificates are reviewed and issued within 3-5 business days after your code review."
+    },
+    {
+      "id": "faq_support",
+      "intent": "contact_support",
+      "keywords": ["contact", "support", "help", "email", "phone", "reach", "mentor", "assistance"],
+      "regex_pattern": "\\b(contact|support|reach|helpdesk|email|phone|mentor|human)\\b",
+      "question": "How do I contact student support or my mentor?",
+      "answer": "You can reach our student support team at support@datheon.edu or connect with your mentor through the Student Workspace portal."
+    },
+    {
+      "id": "faq_technical",
+      "intent": "technical_requirements",
+      "keywords": ["requirements", "python", "version", "system", "install", "environment", "prerequisites"],
+      "regex_pattern": "\\b(python\\s*version|requirements|prerequisites|specs|hardware|system)\\b",
+      "question": "What are the technical requirements for the Python track?",
+      "answer": "You need Python 3.8 or higher installed, an IDE such as VS Code or PyCharm, and standard terminal access. Standard library modules (os, shutil, csv, re, json) are used."
+    },
+    {
+      "id": "faq_deadline",
+      "intent": "deadline_extension",
+      "keywords": ["deadline", "extension", "late", "due date", "extend", "delay"],
+      "regex_pattern": "\\b(deadline|extension|extend|due\\s*date|late\\s*submission)\\b",
+      "question": "Can I request an extension on my project deadline?",
+      "answer": "Yes, an extension of up to 48 hours can be requested via the 'Request Extension' form inside your Student Workspace prior to the deadline."
+    },
+    {
+      "id": "faq_evaluation",
+      "intent": "grading_criteria",
+      "keywords": ["grading", "criteria", "evaluation", "score", "rubric", "reviewed", "marks"],
+      "regex_pattern": "\\b(grade|grading|evaluation|rubric|score|criteria|marks|reviewed)\\b",
+      "question": "How is my project evaluated?",
+      "answer": "Projects are evaluated on four key pillars: functional requirements compliance (40%), code quality and organization (25%), unit test coverage (20%), and documentation (15%)."
+    }
+  ],
+  "fallbacks": [
+    "I'm sorry, I didn't quite catch that. You can ask about our hours of operation, how to submit internship projects, or when certificates are issued.",
+    "I couldn't identify a matching topic. Could you please rephrase your question? (e.g., 'What are your hours?' or 'How do I submit my project?')",
+    "I specialize in answering questions about operational hours, project submissions, and certificate processing. Type 'help' to see all available topics."
+  ]
+}

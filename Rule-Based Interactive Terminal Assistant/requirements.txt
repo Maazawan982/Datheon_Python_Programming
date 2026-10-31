@@ -1,0 +1,10 @@
+# Rule-Based Interactive Terminal Assistant / Chatbot - Requirements
+# This project uses Python 3 standard libraries exclusively:
+# - re (regular expressions for pattern compilation, boundary matching, and tokenization)
+# - json (loading structured sample_faq.json dataset and serializing conversation logs)
+# - os, sys (file path handling, system streams, ANSI terminal styling)
+# - typing (strict type annotations)
+# - unittest (built-in testing framework)
+
+# Recommended Python Version:
+# Python >= 3.8

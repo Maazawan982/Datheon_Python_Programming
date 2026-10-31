@@ -74,15 +74,18 @@ application = app
 
 # Script paths
 TASK1_SCRIPT = os.path.join(ROOT_DIR, "Hangman Word Guessing Game", "hangman.py")
+TASK2_SCRIPT = os.path.join(ROOT_DIR, "Stock Portfolio Performance Tracker", "portfolio.py")
 TASK3_SCRIPT = os.path.join(ROOT_DIR, "Automated File Organizer", "organizer.py")
 
 
 if __name__ == "__main__":
-    # If run in terminal, provide option for Task 1 or Task 3
+    # If run in terminal, provide option for Task 1, Task 2, or Task 3
     args = sys.argv[1:]
     target_script = None
 
-    if args and ("organizer" in args[0] or args[0] in ("3", "task3", "task_3")):
+    if args and ("portfolio" in args[0] or "stock" in args[0] or args[0] in ("2", "task2", "task_2")):
+        target_script = TASK2_SCRIPT
+    elif args and ("organizer" in args[0] or args[0] in ("3", "task3", "task_3")):
         target_script = TASK3_SCRIPT
     elif args and ("hangman" in args[0] or args[0] in ("1", "task1", "task_1")):
         target_script = TASK1_SCRIPT
@@ -91,13 +94,16 @@ if __name__ == "__main__":
         print("                DATHEON_PYTHON_PROGRAMMING")
         print("=" * 60)
         print(" 1) Task 01: Hangman Word Guessing Game (Console)")
+        print(" 2) Task 02: Stock Portfolio Performance Tracker")
         print(" 3) Task 03: Automated File Organizer & Cleanup Utility")
         print("=" * 60)
-        choice = input("Enter task number to run (1 or 3) [Default: 3]: ").strip()
+        choice = input("Enter task number to run (1, 2, or 3) [Default: 2]: ").strip()
         if choice == "1":
             target_script = TASK1_SCRIPT
-        else:
+        elif choice == "3":
             target_script = TASK3_SCRIPT
+        else:
+            target_script = TASK2_SCRIPT
 
     if target_script and os.path.isfile(target_script):
         sys.path.insert(0, os.path.dirname(target_script))

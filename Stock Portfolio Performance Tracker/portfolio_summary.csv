@@ -1,0 +1,8 @@
+Timestamp,Symbol,Company_Name,GICS_Sector,Shares,Buy_Price,Current_Price,Invested_Capital,Current_Value,Gain_Loss_Dollar,Gain_Loss_Percent
+2026-10-31 07:44:35,AAPL,Apple Inc.,Information Technology,15.0000,185.00,344.63,2775.00,5169.45,+2394.45,+86.29%
+2026-10-31 07:44:35,AMZN,Amazon,Consumer Discretionary,20.0000,174.20,240.35,3484.00,4807.00,+1323.00,+37.97%
+2026-10-31 07:44:35,MSFT,Microsoft,Information Technology,10.0000,398.50,521.91,3985.00,5219.10,+1234.10,+30.97%
+2026-10-31 07:44:35,NVDA,Nvidia,Information Technology,25.0000,112.40,204.64,2810.00,5116.00,+2306.00,+82.06%
+2026-10-31 07:44:35,TSLA,"Tesla, Inc.",Consumer Discretionary,12.0000,248.80,399.81,2985.60,4797.72,+1812.12,+60.70%
+
+SUMMARY_TOTALS,COUNT: 5,,,,,,16039.60,25109.27,+9069.67,+56.55%
