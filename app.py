@@ -57,9 +57,9 @@ def app(environ, start_response):
     status = "200 OK"
     html = b"""<!DOCTYPE html>
 <html>
-<head><title>Hangman Word Guessing Game</title></head>
+<head><title>Datheon_Python_Programming</title></head>
 <body style="font-family: monospace; background: #09090b; color: #10b981; padding: 2rem; text-align: center;">
-    <h1>Hangman Word Guessing Game</h1>
+    <h1>Datheon_Python_Programming</h1>
     <p>Please build the project using <code>npm run build</code> or deploy via Vite on Vercel.</p>
 </body>
 </html>"""
@@ -72,14 +72,38 @@ def app(environ, start_response):
 application = app
 
 
+# Script paths
+TASK1_SCRIPT = os.path.join(ROOT_DIR, "Hangman Word Guessing Game", "hangman.py")
+TASK3_SCRIPT = os.path.join(ROOT_DIR, "Automated File Organizer", "organizer.py")
+
+
 if __name__ == "__main__":
-    # If run in terminal, launch the console Hangman game
-    if os.path.isfile(GAME_SCRIPT):
-        # Execute the game script in the current process
-        with open(GAME_SCRIPT, "r", encoding="utf-8") as f:
-            code = f.read()
-        # Add project folder to sys.path
-        sys.path.insert(0, os.path.dirname(GAME_SCRIPT))
-        exec(compile(code, GAME_SCRIPT, "exec"), {"__name__": "__main__"})
+    # If run in terminal, provide option for Task 1 or Task 3
+    args = sys.argv[1:]
+    target_script = None
+
+    if args and ("organizer" in args[0] or args[0] in ("3", "task3", "task_3")):
+        target_script = TASK3_SCRIPT
+    elif args and ("hangman" in args[0] or args[0] in ("1", "task1", "task_1")):
+        target_script = TASK1_SCRIPT
     else:
-        print(f"Error: Game script not found at {GAME_SCRIPT}")
+        print("=" * 60)
+        print("                DATHEON_PYTHON_PROGRAMMING")
+        print("=" * 60)
+        print(" 1) Task 01: Hangman Word Guessing Game (Console)")
+        print(" 3) Task 03: Automated File Organizer & Cleanup Utility")
+        print("=" * 60)
+        choice = input("Enter task number to run (1 or 3) [Default: 3]: ").strip()
+        if choice == "1":
+            target_script = TASK1_SCRIPT
+        else:
+            target_script = TASK3_SCRIPT
+
+    if target_script and os.path.isfile(target_script):
+        sys.path.insert(0, os.path.dirname(target_script))
+        with open(target_script, "r", encoding="utf-8") as f:
+            code = f.read()
+        exec(compile(code, target_script, "exec"), {"__name__": "__main__"})
+    else:
+        print(f"Error: Target script not found at {target_script}")
+

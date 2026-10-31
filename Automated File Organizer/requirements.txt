@@ -1,0 +1,10 @@
+# Python Standard Library Requirements
+# This utility uses standard library modules exclusively:
+# - os (directory scanning with os.scandir)
+# - shutil (high-level file operations: shutil.move)
+# - pathlib (object-oriented filesystem paths)
+# - logging (formatted operational logging)
+# - unittest (built-in testing framework)
+
+# Recommended Python Version:
+# Python >= 3.8

@@ -1,7 +1,7 @@
 [project]
-name = "hangman-word-guessing-game"
+name = "Datheon_Python_Programming"
 version = "1.0.0"
-description = "Hangman Word Guessing Game"
+description = "Datheon_Python_Programming - Python 3 workspace for desktop utilities and tasks"
 
 [tool.vercel]
 entrypoint = "app.py:app"

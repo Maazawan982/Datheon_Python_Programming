@@ -1,6 +1,6 @@
 {
   "name": "Hangman Word Guessing Game",
-  "description": "Interactive console and terminal Hangman Word Guessing Game in Python 3 with ASCII visual gallows art, word list loading, and modular design.",
+  "description": "Interactive Python 3 desktop tasks workspace featuring Task 01: Hangman Word Guessing Game and Task 03: Automated File Organizer & Cleanup Utility with Gmail-style sidebar navigation.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
